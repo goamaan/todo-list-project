@@ -1,12 +1,27 @@
-$("li").click(function() {
+$("ul").on("click", "li", function() {
   $(this).toggleClass("completed");
 });
 
-$("span").click(function(event) {
+$("ul").on("click", "span", function(event) {
   $(this)
     .parent()
-    .fadeOut(function() {
+    .fadeOut(500, function() {
       $(this).remove();
     });
-  even.stopPropogation();
+  event.stopPropagation();
+});
+
+$("input[type='text']").keypress(function(event) {
+  if (
+    event.which === 13 &&
+    $(this)
+      .val()
+      .trim() !== ""
+  ) {
+    var todoText = $(this)
+      .val()
+      .trim();
+    $(this).val("");
+    $("ul").append(`<li><span>X </span>${todoText} </li>`);
+  }
 });
