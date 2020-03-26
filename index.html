@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/todos.css" />
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -13,14 +17,26 @@
   </head>
   <body>
     <div class="container">
-      <h1>To-do List</h1>
-      <input type="text" />
+      <h1>
+        To-do List <span><i class="fas fa-plus"></i></span>
+      </h1>
+      <input type="text" placeholder="Add New Todo" />
       <ul>
-        <li><span>X </span>item 1</li>
-        <li><span>X </span>item 2</li>
-        <li><span>X </span>item 3</li>
+        <!-- <li>
+          <span><i class="fas fa-trash"></i></span> item 1
+        </li>
+        <li>
+          <span><i class="fas fa-trash"></i></span> item 2
+        </li>
+        <li>
+          <span><i class="fas fa-trash"></i></span> item 3
+        </li> -->
       </ul>
     </div>
     <script src="assets/js/todos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3fa7205295.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
